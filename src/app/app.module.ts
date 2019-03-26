@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import {AppRoutingModule} from './app-routing/app-routing.module';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { ContactComponent } from './contact/contact.component';
     MatNativeDateModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule,
     MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatTableModule,
     MatTabsModule, MatToolbarModule, MatTooltipModule,
-    FlexLayoutModule
+    FlexLayoutModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
