@@ -1,3 +1,4 @@
+import {Categoria} from './categoria';
 
 
 export class Equipo {
@@ -7,6 +8,7 @@ export class Equipo {
   codigo: string;
   vendido: boolean;
   precio: string;
+  categoria: Categoria;
 
 
 }

@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { CatalogoComponent } from './catalogo/catalogo.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { CategoriaComponent } from './categoria/categoria.component';
     AboutComponent,
     HomeComponent,
     ContactComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    CatalogoComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
