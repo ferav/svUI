@@ -19,6 +19,8 @@ import { ContactComponent } from './contact/contact.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
+import {HttpClientModule} from '@angular/common/http';
+import {baseURL} from './shared/baseurl';
 
 
 @NgModule({
@@ -39,9 +41,11 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
     MatNativeDateModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule,
     MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatTableModule,
     MatTabsModule, MatToolbarModule, MatTooltipModule,
-    FlexLayoutModule, AppRoutingModule
+    FlexLayoutModule, AppRoutingModule, HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: 'BaseURL', useValue: baseURL}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
