@@ -8,7 +8,7 @@ export class Equipo {
   codigo: string;
   vendido: boolean;
   precio: string;
-  categoria: Categoria;
+  categoriaId: number;
 
 
 }

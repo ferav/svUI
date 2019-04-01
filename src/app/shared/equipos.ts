@@ -9,12 +9,7 @@ export const EQUIPOS: Equipo[] = [
     codigo: 'cat0323dl43234aefvt342',
     vendido: false,
     precio: '4.99',
-    categoria: {
-      id: 2,
-      nombre: 'EXCAVADORAS',
-      url_Categoria: 'excavadoras',
-      imagen: '/assets/images/excavadora.jpg'
-    }
+    categoriaId: 1
   },
   {
     id: 1,
@@ -23,11 +18,6 @@ export const EQUIPOS: Equipo[] = [
     codigo: 'cat0320dl',
     vendido: false,
     precio: '4.99',
-    categoria: {
-      id: 2,
-      nombre: 'EXCAVADORAS',
-      url_Categoria: 'excavadoras',
-      imagen: '/assets/images/excavadora.jpg'
-    }
+    categoriaId: 2
   }
   ];

@@ -21,6 +21,10 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import {HttpClientModule} from '@angular/common/http';
 import {baseURL} from './shared/baseurl';
+import { RegistroEquipoComponent } from './registro-equipo/registro-equipo.component';
+import {FormsModule} from '@angular/forms';
+import { SubirImagenComponent } from './subir-imagen/subir-imagen.component';
+import { EquipoDetalleComponent } from './equipo-detalle/equipo-detalle.component';
 
 
 @NgModule({
@@ -32,7 +36,10 @@ import {baseURL} from './shared/baseurl';
     HomeComponent,
     ContactComponent,
     CategoriaComponent,
-    CatalogoComponent
+    CatalogoComponent,
+    RegistroEquipoComponent,
+    SubirImagenComponent,
+    EquipoDetalleComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
@@ -41,7 +48,7 @@ import {baseURL} from './shared/baseurl';
     MatNativeDateModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule,
     MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatTableModule,
     MatTabsModule, MatToolbarModule, MatTooltipModule,
-    FlexLayoutModule, AppRoutingModule, HttpClientModule
+    FlexLayoutModule, AppRoutingModule, HttpClientModule, FormsModule
   ],
   providers: [
     {provide: 'BaseURL', useValue: baseURL}
