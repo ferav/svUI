@@ -9,6 +9,8 @@ export class Equipo {
   vendido: boolean;
   precio: string;
   categoriaId: number;
-
+  anio: number;
+  descripcion: string;
+  marca: string;
 
 }
