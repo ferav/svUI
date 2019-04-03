@@ -25,6 +25,8 @@ import { RegistroEquipoComponent } from './registro-equipo/registro-equipo.compo
 import {FormsModule} from '@angular/forms';
 import { SubirImagenComponent } from './subir-imagen/subir-imagen.component';
 import { EquipoDetalleComponent } from './equipo-detalle/equipo-detalle.component';
+import { EditarEquipoComponent } from './editar-equipo/editar-equipo.component';
+import { EliminarEquipoComponent } from './eliminar-equipo/eliminar-equipo.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { EquipoDetalleComponent } from './equipo-detalle/equipo-detalle.componen
     CatalogoComponent,
     RegistroEquipoComponent,
     SubirImagenComponent,
-    EquipoDetalleComponent
+    EquipoDetalleComponent,
+    EditarEquipoComponent,
+    EliminarEquipoComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
