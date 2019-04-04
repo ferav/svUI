@@ -31,7 +31,7 @@ export class CatalogoComponent implements OnInit {
     console.log(categoria);
     this.idCategoria = categoria.id;
     this.equipoService.getEquipos(this.idCategoria).subscribe(equipos => this.equipos = equipos);
-    
+
   }
   eliminarEquipo(id: number): void {
     //const id = +this.route.snapshot.params['id'];
