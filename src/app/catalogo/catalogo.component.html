@@ -1,0 +1,40 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+  <mat-form-field class="formCat">
+    <mat-select placeholder="Seleccionar Equipos por categoria"   name="equipo_select"  >
+      <mat-option  *ngFor="let categoria of categorias" (click)="categoriaId(categoria)" value="{{ categoria.nombre }}">{{ categoria.nombre }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+<div fxFlex>
+    <mat-grid-list [cols]="2" bind-rowHeight="'200px'" [gutterSize]="'10px'">
+      <mat-grid-tile *ngFor="let equipo of equipos" [routerLink]="['/detalleEquipo',equipo.id]" [colspan] = "1" [rowspan]="1">
+        <img height="200px" data-src="data:image/png;base64,{{equipo.imagen}}"
+             alt={{equipo.modelo}}>
+        <mat-grid-tile-footer>
+          <h1 mat-line>{{equipo.modelo | uppercase}}</h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+<!--
+  <div fxFlex="40" *ngIf="equipos">
+    <mat-card>
+      <mat-card-title-group>
+        <mat-card-title>
+          <h3>{{equipos.modelo | uppercase}}</h3>
+        </mat-card-title>
+      </mat-card-title-group>
+      <img matCardImage src={{equipos.imagen}} alt={{equipos.modelo}}>
+      <mat-card-actions align="start">
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+-->
+</div>
+

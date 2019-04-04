@@ -1,0 +1,68 @@
+
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+  <div fxFlex *ngIf="equipoBuscado">
+    <div>
+      <h3>Registrar Equipo</h3>
+      <hr>
+    </div>
+  </div>
+  <div fxFlex fxFlexOffset="20px" class="form-size">
+
+
+    <form novalidate (ngSubmit)="onSubmit()" #RegistroForm="ngForm" >
+      <p>
+        <mat-form-field class="half-width">
+          <input matInput   placeholder="Modelo" type="text" [(ngModel)]="selectedEquipo.modelo" name="modelo"
+                  #modelo="ngModel" required>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="half-width">
+          <input matInput   placeholder="Marca" type="text" [(ngModel)]="selectedEquipo.marca" name="marca"
+                 #marca="ngModel" required>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="half-width">
+          <input matInput   placeholder="Año" type="number" [(ngModel)]="selectedEquipo.anio" name="anio"
+                 #anio="ngModel" required>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="half-width">
+          <input matInput   placeholder="Codigo" type="text" [(ngModel)]="selectedEquipo.codigo" name="codigo"
+                 #codigo="ngModel" required>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="half-width">
+          <input matInput   placeholder="Descripcion" type="text" [(ngModel)]="selectedEquipo.descripcion" name="descripcion"
+                 #descripcion="ngModel" required>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="half-width">
+          <mat-select [(ngModel)]="selectedEquipo.categoriaId" placeholder="Categoria" name="selectCategoriaid" #categoriaId="ngModel" >
+            <mat-option *ngFor="let categoria of categorias"
+                        [value] = "categoria.id" >{{ categoria.nombre }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="half-width">
+          <input matInput   placeholder="Precio" [(ngModel)]="selectedEquipo.precio" name="precio"
+                 #precio="ngModel" required type="number">
+        </mat-form-field>
+      </p>
+      <p> <input type="file" (change)="onFileSelected($event)"></p>
+
+      <button type="submit" mat-button class="background-primary text-floral-white">Registrar</button>
+    </form>
+  </div>
+
+</div>

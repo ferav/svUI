@@ -1,0 +1,29 @@
+<div class="container"
+fxLayout="row"
+fxLayout.sm="column"
+fxLayout.xs="column"
+fxLayoutAlign.gt-md="space-around center"
+fxLayoutGap="10px"
+fxLayoutGap.xs="0">
+
+  <div fxFlex="40" *ngIf="equipo">
+    <p matLine>Modelo: {{equipo.modelo}}</p>
+    <p matLine>Codigo: {{equipo.codigo}}</p>
+  <h1> Subir Imagenes</h1>
+  <input type="file" (change)="onFileSelected($event)">
+  <button type="button" (click)="onUpload(equipo.id)"  >Upload</button>
+</div>
+
+
+
+  <div fxFlex>
+    <mat-grid-list [cols]="2" bind-rowHeight="'200px'" [gutterSize]="'10px'">
+      <mat-grid-tile *ngFor="let imagenB of imagenes" [colspan] = "1" [rowspan]="1">
+        <img height="200px" data-src="data:image/png;base64,{{imagenB.imagen}}">
+        <mat-grid-tile-footer>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+

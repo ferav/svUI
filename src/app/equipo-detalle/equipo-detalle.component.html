@@ -1,0 +1,53 @@
+<div class="container"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign.gt-md="space-around center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
+  <div fxFlex="40" *ngIf="equipo">
+    <mat-card>
+      <mat-card-title-group>
+        <mat-card-title>
+          <h3>{{equipo.modelo | uppercase}}</h3>
+        </mat-card-title>
+      </mat-card-title-group>
+      <img matCardImage data-src="data:image/png;base64,{{equipo.imagen}}">
+      <mat-card-content>
+        <p>
+        </p>
+      </mat-card-content>
+      <mat-card-actions align="start">
+        <button mat-button >BACK</button>
+        <button mat-button >LIKE</button>
+        <button mat-button >SHARE</button>
+        <span class="flex-spacer"></span>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+
+  <div fxFlex="40" *ngIf="equipo">
+    <h1>Equipo:</h1>
+    <mat-list>
+      <mat-list-item >
+        <p matLine>Modelo: {{equipo.modelo}}</p>
+        <p matLine>Codigo: {{equipo.codigo}}</p>
+        <p matLine>Precio: {{equipo.precio}}</p>
+        <p matLine>Año: {{equipo.anio}}</p>
+        <p matLine>Marca: {{equipo.marca}}</p>
+        <p matLine>Descripcion: {{equipo.descripcion}}</p>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>
+
+<div fxFlex>
+  <mat-grid-list [cols]="2" bind-rowHeight="'200px'" [gutterSize]="'10px'">
+    <mat-grid-tile *ngFor="let imagenB of imagenes" [colspan] = "1" [rowspan]="1">
+      <img height="200px" data-src="data:image/png;base64,{{imagenB.imagen}}">
+      <mat-grid-tile-footer>
+      </mat-grid-tile-footer>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
