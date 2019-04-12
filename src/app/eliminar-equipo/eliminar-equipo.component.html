@@ -3,7 +3,7 @@
      fxLayoutGap="10px">
 
   <mat-form-field class="formCat">
-    <mat-select placeholder="Seleccionar Equipos por categoria"   name="equipo_select"  >
+    <mat-select placeholder="Seleccionar Equipos por categoria"   name="equipo_select_eliminar"  >
       <mat-option  *ngFor="let categoria of categorias" (click)="categoriaId(categoria)" value="{{ categoria.nombre }}">{{ categoria.nombre }}</mat-option>
     </mat-select>
   </mat-form-field>
@@ -16,7 +16,7 @@
              alt={{equipo.modelo}}>
         <mat-grid-tile-footer>
           <h1 mat-line>{{equipo.modelo | uppercase}}</h1>
-          <button type="button" (click)="eliminarEquipo(equipo.id)" [routerLink]="['/home']">Eliminar Equipo</button>
+          <button type="button" (click)="eliminarEquipo(equipo.id)" [routerLink]="['/home']" name="equipo{{equipo.id}}">Eliminar Equipo</button>
         </mat-grid-tile-footer>
       </mat-grid-tile>
     </mat-grid-list>

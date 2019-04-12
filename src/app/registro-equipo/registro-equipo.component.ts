@@ -45,7 +45,7 @@ export class RegistroEquipoComponent implements OnInit {
   onUpload(id: number): void {
     const fd = new FormData();
     fd.append('file', this.selectedFile,this.selectedFile.name);
-    this.equipoService.sendImage(fd, id).subscribe(data => {alert('imagen guardado...!!!')});
+    this.equipoService.sendImage(fd, id).subscribe(data => {});
   }
 
 }
